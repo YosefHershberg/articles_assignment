@@ -1,6 +1,6 @@
 # Articles Assignment
 
-This is a React.js application that fetches news articles from the Article API ([newsapi.org](https://newsapi.org/)). The app utilizes local storage to store fetched articles and provides offline access to previously fetched data. It is built with Vite, Styled Components, and Material-UI for building the user interface.
+This is a React.js application that fetches news articles from the Article API ([newsapi.org](https://newsapi.org/)). The app utilizes local storage to store fetched articles and provides offline access to previously fetched data. It is built Styled Components, and Material-UI for building the user interface.
 
 ## Features
 
