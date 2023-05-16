@@ -14,13 +14,13 @@ This is a React.js application that fetches news articles from the Article API (
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/YosefHershberg/articles_assignment.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd your-repo
+cd articles_assignment
 ```
 
 3. Install the dependencies:
