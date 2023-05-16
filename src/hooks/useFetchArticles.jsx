@@ -1,16 +1,16 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react';
-import { queries, zipperMerge, getRandomNumbers } from '../utils/utils';
+import { queries, zipperMerge, getRandomNumbers, getPreviousDate } from '../utils/utils';
 import { useIsOnline } from '../hooks/useIsOnline'
 
-const API_KEY = "db4ca9ec82ca4815ae6598f27e6fe0d0"
+const API_KEY = import.meta.env.VITE_API_KEY
 
 function useFetchArticles() {
     const [articleList, setArticleList] = useState()
     const [isLoading, setIsLoading] = useState()
     const [error, setError] = useState()
     const [triger, setTrigger] = useState(false)
-    
+
     const { isOnline } = useIsOnline()
     
     const refetch = () => setTrigger(prev => !prev)
@@ -31,7 +31,7 @@ function useFetchArticles() {
     }
 
     const fetchArticlesByQuery = async (query) => {
-        const res = await axios.get(`https://newsapi.org/v2/everything?q=${query}&from=2023-04-15&sortBy=publishedAt&apiKey=${API_KEY}`)
+        const res = await axios.get(`https://newsapi.org/v2/everything?q=${query}&from=${getPreviousDate}5&sortBy=publishedAt&apiKey=${API_KEY}`)
         const fromatedForLS = { articles: res.data.articles, query }
         const storedData = localStorage.getItem('articals');
         if (storedData !== null) {
