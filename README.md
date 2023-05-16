@@ -1,23 +1,57 @@
-##Articles Assignment
-This is a React.js application created with Vite that fetches data from the Article API provided by NewsAPI. The application utilizes local storage to store fetched articles and implements a network connection check to determine whether to fetch data from the API or from the local storage.
+# React News App
 
-#Features
-Fetches articles from the Article API and saves them in local storage
-Checks network connection status on page refresh or when the "Refresh" button is clicked
-If network connection is available, fetches articles from the API; otherwise, fetches articles from local storage
+This is a React.js application that fetches news articles from the Article API ([newsapi.org](https://newsapi.org/)). The app utilizes local storage to store fetched articles and provides offline access to previously fetched data. It is built with Vite, Styled Components, and Material-UI for building the user interface.
 
-#Installation
-Clone the repository: git clone https://github.com/your-username/your-repo.git
-Navigate to the project directory: cd your-repo
-Install dependencies: npm install
+## Features
 
-#Configuration
-Before running the application, make sure to obtain an API key from NewsAPI by signing up for a free account.
-Once you have the API key, create a .env file in the project root and add the following line:
-VITE_API_KEY=your-api-key
-Replace your-api-key with your actual NewsAPI API key.
+- Fetches news articles from the Article API and saves them in local storage.
+- Provides offline access to previously fetched articles when there is no internet connection.
+- Refresh button to manually trigger a network check and fetch new articles if connected.
+- Responsive and visually appealing user interface built with Styled Components and Material-UI.
 
-#Usage
-To start the development server, run the following command:
+## Installation
 
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/your-repo.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd your-repo
+```
+
+3. Install the dependencies:
+
+```bash
+npm install
+```
+
+## Configuration
+
+1. Obtain an API key from [newsapi.org](https://newsapi.org/).
+
+2. Create a `.env` file in the root of your project.
+
+3. Add your API key to the `.env` file:
+
+```plaintext
+REACT_APP_API_KEY=your-api-key
+```
+
+## Usage
+
+1. Start the development server:
+
+```bash
 npm run dev
+```
+
+2. Open your browser and visit the required local-host
+
+3. The app will automatically fetch articles from the API and store them in local storage.
+
+4. Use the refresh button to fetch new articles if you have an internet connection. If not, the app will load articles from the local storage.
+
